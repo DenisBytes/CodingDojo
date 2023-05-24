@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/AbstractArt/AbstractArt.iml" filepath="$PROJECT_DIR$/AbstractArt/AbstractArt.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AlfredBot/AlfredBot.iml" filepath="$PROJECT_DIR$/AlfredBot/AlfredBot.iml" />
+      <module fileurl="file://$PROJECT_DIR$/BankAccount/BankAccount.iml" filepath="$PROJECT_DIR$/BankAccount/BankAccount.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Barista/Barista.iml" filepath="$PROJECT_DIR$/Barista/Barista.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CafeJava/CafeJava.iml" filepath="$PROJECT_DIR$/CafeJava/CafeJava.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Calculator1/Calculator1.iml" filepath="$PROJECT_DIR$/Calculator1/Calculator1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Calculator2/Calculator2.iml" filepath="$PROJECT_DIR$/Calculator2/Calculator2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CarAndDriver/CarAndDriver.iml" filepath="$PROJECT_DIR$/CarAndDriver/CarAndDriver.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CareSoft/CareSoft.iml" filepath="$PROJECT_DIR$/CareSoft/CareSoft.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Coffeedoree64/Coffeedoree64.iml" filepath="$PROJECT_DIR$/Coffeedoree64/Coffeedoree64.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DDL_Assignment/DDL_Assignment.iml" filepath="$PROJECT_DIR$/DDL_Assignment/DDL_Assignment.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HelloWorld/HelloWorld.iml" filepath="$PROJECT_DIR$/HelloWorld/HelloWorld.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Java.iml" filepath="$PROJECT_DIR$/.idea/Java.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ListAssignment/ListAssignment.iml" filepath="$PROJECT_DIR$/ListAssignment/ListAssignment.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ListOfExceptions/ListOfExceptions.iml" filepath="$PROJECT_DIR$/ListOfExceptions/ListOfExceptions.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MapOfTheHashmatique/MapOfTheHashmatique.iml" filepath="$PROJECT_DIR$/MapOfTheHashmatique/MapOfTheHashmatique.iml" />
+      <module fileurl="file://$PROJECT_DIR$/OrderItems/OrderItems.iml" filepath="$PROJECT_DIR$/OrderItems/OrderItems.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Puzzling/Puzzling.iml" filepath="$PROJECT_DIR$/Puzzling/Puzzling.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TestCafe/TestCafe.iml" filepath="$PROJECT_DIR$/TestCafe/TestCafe.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Zookeeper/Zookeeper.iml" filepath="$PROJECT_DIR$/Zookeeper/Zookeeper.iml" />
+    </modules>
+  </component>
+</project>
