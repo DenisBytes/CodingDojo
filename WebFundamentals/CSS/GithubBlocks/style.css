@@ -1,0 +1,44 @@
+.parent {
+    width: 1000px;
+    margin: 0px auto;
+    flex-direction: column;
+}
+
+h1 {
+    font-style: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+.container1 {
+    background-color: lightblue;
+    justify-content: space-around;
+    margin: 10px;
+    padding: 10px;
+}
+
+.container2 {
+    background-color: bisque;
+    justify-content: space-evenly;
+    margin: 10px;
+    padding: 10px;
+}
+
+.container3 {
+    background-color: black;
+    justify-content: space-around;
+    margin: 10px;
+    padding: 10px;
+}
+    
+img {
+    height: 200px;
+}
+
+.d-flex {
+    display: flex;
+}
+
+p {
+    text-align: center;
+}

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Profile Page</title>
+</head>
+
+<body>
+    <div class="nav">
+        <h1 class="nav-title">Profile</h1>
+        <ul class="nav-links">
+            <h2><li><a href="#">Home</a></li></h2>
+            <h2><li><a href="#" class="active">My Profile</a></li></h2>
+            <h2><li><a href="#">Find Connections</a></li></h2>
+        </ul>
+        <input type="button" class="signout" value="Sign Out">
+    </div>
+    <div class="big-div">
+        <div class="parent1">
+            <div class="container1">
+                <span class="top-part"></span>
+                <div class="bottom-part">
+                    <img src="img/jane-m.jpg" alt="image not found" class="janeImg">
+                    <h1 id="profileName">Jane Doe</h1>
+                    <img src="img/map-marker.png" alt="image not found" class="positionImg">
+                    <h3 class="positionText"> Position</h3>
+                    <p>Developer | Engineer | Problem Solver</p>
+                    <p>Mater of the shadows and the Internet!</p><br>
+                    <div class="gear">
+                        <img src="img/gear.png" alt="Image not found" class="gearImg">
+                        <h4><a href="#" id="editProfile" class="editClass" onclick="switchName()">Edit Profile</a></h4>
+                    </div>
+                </div>
+            </div>
+            <div class="container2">
+                <span class="top-part containerHeader">
+                    <h2>Education</h2>
+                </span>
+                <div class="bottom-part">
+                    <h2>Coding Dojo - Full Stack Bootcamp</h2>
+                    <h3 class="date">Dec 2019 - Mar 2020</h3>
+                    <h3>Triple black belt in Python, MERN, and C#...</h3>
+                </div>
+            </div>
+        </div>
+        <div class="parent2">
+            <div class="container3">
+                <span class="top-part containerHeader">
+                    <input type="button" class="containerRequests" value="2" id="conReqNumber">
+                    <h2 class="reqTitle">Connection Requests</h2>
+                </span>
+                <div class="bottom-part">
+                    <div class="users" id="user1">
+                        <div class="left-part">
+                            <img src="img/todd-s.jpg" alt="image not found" class="userImg">
+                            <h3 class="userHandle">Todd E</h3>
+                        </div>
+                        <div class="acceptCloseButton">
+                            <button><img src="img/accept-circle.png" alt="image not found" class="acceptCloseButtonImg" onclick="removeUser(0); addConNumber()"></button>
+                            <button><img src="img/close-circle.png" alt="image not found" class="acceptCloseButtonImg" onclick="removeUser(0)"></button>
+                        </div>
+                    </div>
+                    <div class="users" id="user2">
+                        <div class="left-part">
+                            <img src="img/phil-s.jpg" alt="image not found" class="userImg">
+                            <h3 class="userHandle">Phil K</h3>
+                        </div>
+                        <div class="acceptCloseButton">
+                            <button><img src="img/accept-circle.png" alt="image not found" class="acceptCloseButtonImg" onclick="removeUser(1); addConNumber()"></button>
+                            <button><img src="img/close-circle.png" alt="image not found" class="acceptCloseButtonImg" onclick="removeUser(1)"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container4">
+                <span class="top-part containerHeader">
+                    <input type="button" class="containerRequests2" id="conNumber" value="500">
+                    <h2 class="conTitle">Your Connections</h2>
+                </span>
+                <div class="bottom-part">
+                    <div class="users">
+                        <div class="left-part">
+                            <img src="img/adrien-s.jpg" alt="image not found" class="userImg">
+                            <h3 class="userHandle">Adrien D</h3>
+                        </div>
+                    </div>
+                    <div class="users">
+                        <div class="left-part">
+                            <img src="img/anne-s.jpg" alt="image not found" class="userImg">
+                            <h3 class="userHandle">Anne J</h3>
+                        </div>
+                    </div>
+                    <div class="users">
+                        <div class="left-part">
+                            <img src="img/alayne-s.jpg" alt="image not found" class="userImg">
+                            <h3 class="userHandle">Alayne T</h3>
+                        </div>
+                    </div>
+                    <div class="users">
+                        <div class="left-part">
+                            <img src="img/arry-s.jpg" alt="image not found" class="userImg">
+                            <h3 class="userHandle">Arry Y</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="last-part">
+                    <h3 class="viewMore"><a href="#">View More</a></h3>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

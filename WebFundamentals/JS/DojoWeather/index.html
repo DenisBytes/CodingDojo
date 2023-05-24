@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Dojo Weather</title>
+</head>
+<body>
+    <nav class="nav">
+        <h1 class="nav-title">Dojo Weather</h1>
+        <ul class="nav-links">
+            <h2 onclick = "cityChanger()"><li><a href="#">Milan</a></li></h2>
+            <h2 onclick = "cityChanger()"><li><a href="#" class="active">Tirana</a></li></h2>
+            <h2 onclick = "cityChanger()"><li><a href="#">Salzburg</a></li></h2>
+        </ul>
+    </nav>
+
+    <div class="bigdiv">
+        <div class="topdiv">
+            <h1>San Jose</h1>
+            <label class="label" for="tempSelect">show temp in </label>
+            <select name="tempSelect" id="tempSelect" onchange="convert()">
+                <option id="tempSelect" value="cel">cel</option>
+                <option id="tempSelect" value="far">far</option>
+            </select>
+        </div>
+        <div class="middiv">
+            <div class="tempDiv">
+                <h2>Today</h2>
+                <img src="img/some_rain.png" alt="not found" class="tempImg">
+                <p>some rain</p>
+                <div class="tempFlex">
+                    <h2 class="degree maxdegree" id="degree">24</h2>
+                    <h2 class="degree mindegree" id="degree">18</h2>
+                </div>
+            </div>
+            <div class="tempDiv">
+                <h2>Tomorrow</h2>
+                <img src="img/some_sun.png" alt="not found" class="tempImg">
+                <p>some sun</p>
+                <div class="tempFlex">
+                    <h2 class="degree maxdegree" id="degree">27</h2>
+                    <h2 class="degree mindegree" id="degree">19</h2>
+                </div>
+            </div>
+            <div class="tempDiv">
+                <h2>Friday</h2>
+                <img src="img/some_clouds.png" alt="not found" class="tempImg">
+                <p>some clouds</p>
+                <div class="tempFlex">
+                    <h2 class="degree maxdegree" id="degree">21</h2>
+                    <h2 class="degree mindegree" id="degree">16</h2>
+                </div>
+            </div>
+            <div class="tempDiv">
+                <h2>Saturday</h2>
+                <img src="img/some_sun.png" alt="not found" class="tempImg">
+                <p>some sun</p>
+                <div class="tempFlex">
+                    <h2 class="degree maxdegree" id="degree">26</h2>
+                    <h2 class="degree mindegree" id="degree">21</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <img src="img/cookie.png" alt="not found">
+        <div class="footerText">
+            <h1>Stop! Cookies time</h1>
+            <p>We use cookies (sadly not the edible ones) to personalize content and ads, to provide social media features and to analyze our traffic. <a href="#">Read more...</a></p>
+        </div>
+        <button class="footerButton" value="I Accept" onclick="removeFooterFunction()">I Accept</button>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
