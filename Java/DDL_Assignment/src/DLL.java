@@ -87,13 +87,47 @@ public class DLL {
         return count;
     }
 
+    // not done
     public void insertAt(Node newNode, int index){
+        int count = 0;
+
         if(this.head == null) {
             this.head = newNode;
             this.tail = newNode;
             return;
         }
 
+    }
 
+    //not done
+    public void removeAt(int index){
+
+    }
+
+    public boolean isPalindrome(){
+        Node current = this.head;
+        ArrayList<Integer> list1 = new ArrayList<>();
+        ArrayList<Integer> list2 = new ArrayList<>();
+
+        while(current != null) {
+            list1.add(current.value);
+            System.out.println(current.value);
+            current = current.next;
+        }
+
+        Node current1 = this.tail;
+
+        while (current1!= null){
+            list2.add(current1.value);
+            System.out.println(current1.value);
+            current1 = current1.previous;
+        }
+
+        if (list1.equals(list2)){
+            return true;
+        }
+        else{
+            return false;
+        }
     }
 }
