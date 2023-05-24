@@ -44,6 +44,7 @@ public class SinglyLinkedList {
         }
     }
 
+    //not done
     public void removeAt(int value){
         Node runner = head;
 
