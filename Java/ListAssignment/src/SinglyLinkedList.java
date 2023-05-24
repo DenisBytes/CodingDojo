@@ -47,14 +47,18 @@ public class SinglyLinkedList {
     //not done
     public void removeAt(int value){
         Node runner = head;
+        Node previous = head;
+        int count = 0;
 
-        while(runner.next.next != null){
-            if(runner.next.value == value){
+        while(runner.next != null){
+            if( count == value){
+                previous.next = runner.next;
                 runner.next = null;
+                break;
             }
-            else{
-                runner = runner.next;
-            }
+            previous = runner;
+            runner = runner.next;
+            count++;
         }
     }
 
