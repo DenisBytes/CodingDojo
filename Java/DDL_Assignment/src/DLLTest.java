@@ -8,6 +8,7 @@ public class DLLTest {
         Node n5 = new Node(50);
         Node n6 = new Node(20);
         Node n7 = new Node(100);
+        Node n8 = new Node (5);
 
         dll.push(n1);
         dll.push(n2);
@@ -24,7 +25,9 @@ public class DLLTest {
         //dll.printValuesForward();
         //System.out.println(dll.contains(50));
         //System.out.println(dll.size());
-
-        System.out.println(dll.isPalindrome());
+        //System.out.println(dll.isPalindrome());
+        //dll.insertAt(n8,2);
+        dll.removeAt(4);
+        dll.printValuesForward();
     }
 }

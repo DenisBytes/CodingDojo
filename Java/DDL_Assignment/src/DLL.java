@@ -27,6 +27,46 @@ public class DLL {
         newNode.previous = lastNode;
         this.tail = newNode;
     }
+    // not done
+    public void insertAt(Node newNode, int index){
+        int count = 1;
+        Node current = this.head;
+
+        if(this.head == null) {
+            this.head = newNode;
+            this.tail = newNode;
+            return;
+        }
+
+        while (current != null){
+            if(count == index){
+                newNode.next = current.next;
+                newNode.previous = current;
+                current.next = newNode;
+            }
+            current = current.next;
+            count++;
+        }
+    }
+    public void removeAt(int index){
+        int count = 0;
+        Node current = this.head;
+
+        if(this.head == null) {
+            return;
+        }
+
+        while (current != null){
+            if(count == index){
+                Node prePopNode = current.previous;
+                prePopNode.next = current.next;
+                current = prePopNode;
+            }
+            current = current.next;
+            count++;
+        }
+    }
+
 
     public void printValuesForward() {
         // find the first node, aka head.
@@ -85,23 +125,6 @@ public class DLL {
         }
 
         return count;
-    }
-
-    // not done
-    public void insertAt(Node newNode, int index){
-        int count = 0;
-
-        if(this.head == null) {
-            this.head = newNode;
-            this.tail = newNode;
-            return;
-        }
-
-    }
-
-    //not done
-    public void removeAt(int index){
-
     }
 
     public boolean isPalindrome(){
