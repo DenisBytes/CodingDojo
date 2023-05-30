@@ -21,4 +21,10 @@ public class DaikichiController {
     public String tomorrow (){
         return "Tomorrow, an opportunity will arise, so be sure to be open to new ideas!";
     }
+
+    @RequestMapping("/hbar")
+    public String hedera(){
+        return "index";
+    }
+
 }
