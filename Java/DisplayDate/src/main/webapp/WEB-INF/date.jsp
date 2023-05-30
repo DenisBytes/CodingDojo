@@ -15,8 +15,6 @@
     <div class="container d-flex justify-content-center">
         <h3><c:out value="${currentDate}"></c:out> </h3>
     </div>
-    <script>
-        alert("this is the date template");
-    </script>
+    <script src="/js/date.js"></script>
 </body>
 </html>

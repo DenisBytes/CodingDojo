@@ -15,8 +15,6 @@
     <div class="container d-flex justify-content-center">
         <h3><c:out value="${currentTime}"></c:out> </h3>
     </div>
-    <script>
-        alert("this is the time template");
-    </script>
+    <script src="/js/time.js"></script>
 </body>
 </html>

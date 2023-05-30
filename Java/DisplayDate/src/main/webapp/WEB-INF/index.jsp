@@ -16,6 +16,5 @@
         <h3><a href="http://localhost:8080/date">Date Template</a></h3>
         <h3><a href="http://localhost:8080/time">Time Template</a></h3>
     </div>
-
 </body>
 </html>
