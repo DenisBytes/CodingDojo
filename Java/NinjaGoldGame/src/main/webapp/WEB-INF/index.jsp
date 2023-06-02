@@ -88,11 +88,10 @@
     <h1>Activities: </h1>
     <div class="container w-100 h-100 border-2 cursor-pointer">
         <c:forEach var="activity" items="${activities}">
-            <c:set var="isEarned" value="${activity.contains('earned')}" />
-            <c:if test="${isEarned}">
+            <c:if test="${activity.contains('earned')}">
                 <p class="green"><c:out value="${activity}" /></p>
             </c:if>
-            <c:if test="${!isEarned}">
+            <c:if test="${!activity.contains('earned')}">
                 <p class="red"><c:out value="${activity}" /></p>
             </c:if>
         </c:forEach>
