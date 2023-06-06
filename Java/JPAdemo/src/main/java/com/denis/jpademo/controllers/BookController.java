@@ -8,14 +8,21 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import java.util.List;
+
 @Controller
 @RequestMapping("/books")
 public class BookController {
     @Autowired
     BookService bookService;
+    public BookController(BookService bookService) {
+        this.bookService = bookService;
+    }
 
     @RequestMapping("")
-    public String index(){
+    public String index(Model model){
+        List<Book> books = bookService.allBooks();
+        model.addAttribute("books", books);
         return "index";
     }
 

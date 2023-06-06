@@ -13,10 +13,10 @@
     <title>Title</title>
 </head>
 <body>
-    <c:out value="${book.title}"></c:out>
-    <c:out value="${book.description}"></c:out>
-    <c:out value="${book.numberOfPages}"></c:out>
-    <c:out value="${book.language}"></c:out>
+    <c:out value="${book.title}"></c:out><br>
+    <c:out value="${book.description}"></c:out><br>
+    <c:out value="${book.numberOfPages}"></c:out><br>
+    <c:out value="${book.language}"></c:out><br>
 
 </body>
 </html>
