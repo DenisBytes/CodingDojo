@@ -28,7 +28,7 @@ public class TravelController {
         return "index";
     }
 
-    @PostMapping("/adding")
+    @PostMapping("")
     public String addTravel(@Valid @ModelAttribute("travel") Travel travel,
                             Model model, BindingResult result){
         if(result.hasErrors()){

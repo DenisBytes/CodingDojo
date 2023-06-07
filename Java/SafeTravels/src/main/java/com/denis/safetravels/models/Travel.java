@@ -1,6 +1,7 @@
 package com.denis.safetravels.models;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Positive;
 import jakarta.validation.constraints.Size;
@@ -17,20 +18,19 @@ public class Travel {
     private Long id;
 
     @NotNull
-    @Size(min = 5, message = "Must be at least 5 characters")
+    @Size(min = 1, max = 200, message="Name must not be blank")
     private String expense;
 
     @NotNull
-    @Size(min = 3, message = "Must be at least 3 characters")
+    @Size(min = 1, max = 200, message="Vendor must not be blank")
     private String vendor;
 
-
-    @NotNull
-    @Positive(message = "Amount must be a positive number")
+    @NotNull(message="Amount must not be blank")
+    @Min(value=0, message="Amount must be greater than zero")
     private Float amount;
 
     @NotNull
-    @Size(min = 5, message = "Must be at least 5 characters")
+    @Size(min = 1, max = 200, message="Description must not be blank")
     private String description;
 
     @Column(updatable = false)

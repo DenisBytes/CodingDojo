@@ -48,7 +48,7 @@
 </div>
 <h1>Add an Expense:</h1>
 <div class="container">
-    <form:form action="/expenses/adding" method="post" modelAttribute="travel">
+    <form:form action="/expenses" method="post" modelAttribute="travel">
         <p>
             <form:label path="expense">Expense</form:label>
             <form:errors path="expense"/>
