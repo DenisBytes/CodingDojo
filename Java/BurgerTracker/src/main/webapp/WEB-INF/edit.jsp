@@ -16,32 +16,13 @@
     <title>Title</title>
 </head>
 <body class="p-4 d-flex flex-column">
-<h1>Burger Tracker</h1>
-<div class="container">
-    <table class="table">
-        <thead>
-        <tr>
-            <th scope="col">Burger</th>
-            <th scope="col">Restaurant</th>
-            <th scope="col">Rating (out of 5)</th>
-            <th scope="col">Action</th>
-        </tr>
-        </thead>
-        <tbody>
-        <c:forEach var="i" items="${burgers}">
-            <tr>
-                <td><c:out value="${i.burgerName}"></c:out></td>
-                <td><c:out value="${i.restaurantName}"></c:out></td>
-                <td><c:out value="${i.rating}"></c:out></td>
-                <td><a href="/burgers/${i.id}/edit">edit</a></td>
-            </tr>
-        </c:forEach>
-        </tbody>
-    </table>
-</div>
+<div class="d-flex justify-content-between">
 <h1>Add a Burger:</h1>
+<h3><a href="http://localhost:8080">Go back</a></h3>
+</div>
 <div class="container">
-    <form:form action="/" method="post" modelAttribute="burger">
+    <form:form action="/burgers/${burger.id}" method="post" modelAttribute="burger">
+        <input type="hidden" name="_method" value="put">
         <p>
             <form:label path="burgerName">Burger Name</form:label>
             <form:errors path="burgerName"/>
