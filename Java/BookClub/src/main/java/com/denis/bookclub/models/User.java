@@ -35,6 +35,9 @@ public class User {
     @OneToMany(mappedBy = "user", fetch = FetchType.LAZY)
     private List<Book> book;
 
+    @OneToMany(mappedBy = "lentUser", fetch = FetchType.LAZY)
+    private List<Book> borrowedBooks;
+
     @Column(updatable = false)
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date createdAt;
@@ -102,6 +105,14 @@ public class User {
 
     public void setBook(List<Book> book) {
         this.book = book;
+    }
+
+    public List<Book> getBorrowedBooks() {
+        return borrowedBooks;
+    }
+
+    public void setBorrowedBooks(List<Book> borrowedBooks) {
+        this.borrowedBooks = borrowedBooks;
     }
 }
 

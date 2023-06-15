@@ -39,7 +39,7 @@
           <form:label path="thoughts">Thoughts:</form:label>
           <form:errors path="thoughts"></form:errors>
           <form:input type="textarea" path="thoughts"></form:input></td>
-        <input type="hidden" name="user" value="${user.id}"/>
+        <input type="hidden" name="user" value="${userId}"/>
         <td><input type="submit" value="Add"/></td>
       </tr>
     </table>

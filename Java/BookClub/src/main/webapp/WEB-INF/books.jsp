@@ -52,6 +52,6 @@
     </tbody>
 </table>
 
-
+<a href="/bookmarket">bookmarket</a>
 </body>
 </html>

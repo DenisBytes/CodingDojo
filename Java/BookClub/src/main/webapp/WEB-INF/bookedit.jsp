@@ -23,7 +23,8 @@
   <a href="/books">back to the shelves</a>
 </div>
 <div class="container">
-  <form:form action="/edit" method="put" modelAttribute="book">
+  <form:form action="/books/${userID}/edit" method="post" modelAttribute="book">
+    <input type="hidden" name="_method" value="put">
     <table>
       <tr>
         <td>
@@ -38,7 +39,7 @@
           <form:label path="thoughts">Thoughts:</form:label>
           <form:errors path="thoughts"></form:errors>
           <form:input type="textarea" path="thoughts"></form:input></td>
-        <input type="hidden" name="user" value="${user.id}"/>
+        <input type="hidden" name="bookId" value="${bookId}"/>
         <td><input type="submit" value="Submit"/></td>
       </tr>
     </table>

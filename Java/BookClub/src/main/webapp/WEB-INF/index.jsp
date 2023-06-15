@@ -21,7 +21,6 @@
 <h3>A place for friends to share thoughts on books</h3>
 <div class="container w-50">
   <form:form action="/register" method="post" modelAttribute="newUser">
-
     <div class="row d-flex justify-content-center">
       <h2>Register: </h2>
     </div>

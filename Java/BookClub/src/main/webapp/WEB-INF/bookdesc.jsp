@@ -31,12 +31,16 @@
   <h3>Here are ${book.user.userName} thoughts:</h3>
 </c:if>
 <div class="container border-bottom border-top border-dark">
-  <textarea>
+  <p>
     ${book.thoughts}
-  </textarea>
+  </p>
 </div>
 <c:if test="${loggedInUserId.equals(book.user.id)}">
-  <a href="/edit"><button>edit</button></a>
+  <a href="/books/edit/${book.id}"><button>edit</button></a>
+  <form action="/books/delete/${book.id}" method="post">
+    <input type="hidden" name="_method" value="delete">
+    <input type="submit" value="Delete">
+  </form>
 </c:if>
 </body>
 </html>

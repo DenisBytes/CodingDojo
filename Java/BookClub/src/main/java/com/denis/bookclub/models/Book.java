@@ -38,6 +38,10 @@ public class Book {
     @JoinColumn(name = "user_id")
     private User user;
 
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "lentUser_id")
+    private User lentUser;
+
     @PrePersist
     public void createOn(){
         this.createdAt = new Date();
@@ -90,5 +94,13 @@ public class Book {
 
     public void setUser(User user) {
         this.user = user;
+    }
+
+    public User getLentUser() {
+        return lentUser;
+    }
+
+    public void setLentUser(User lentUser) {
+        this.lentUser = lentUser;
     }
 }

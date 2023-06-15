@@ -14,6 +14,8 @@ import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @Controller
 public class HomeController {
     @Autowired
@@ -38,7 +40,10 @@ public class HomeController {
     }
 
     @GetMapping("/books/new")
-    public String addBook(@ModelAttribute("book")Book book){
+    public String addBook(@ModelAttribute("book")Book book, HttpSession session,
+                          Model model){
+
+        model.addAttribute("userId",(Long) session.getAttribute("loggedInUserID"));
 
         return"addbook";
     }
@@ -51,14 +56,50 @@ public class HomeController {
         model.addAttribute("book",book);
         return "bookdesc";
     }
-    @GetMapping("/books/edit")
-    public String edit(@ModelAttribute("book")Book book){
+    @GetMapping("/books/edit/{bookId}")
+    public String edit(@ModelAttribute("book")Book book,
+                       @PathVariable("bookId") Long bookId,
+                       HttpSession session, Model model){
+        model.addAttribute("bookId",bookId);
+        model.addAttribute("userID",(Long) session.getAttribute("loggedInUserID"));
         return "bookedit";
     }
 
-    @PutMapping("/edit")
+    @GetMapping("/bookmarket")
+    public String market(Model model, HttpSession session){
+        model.addAttribute("user",userService.findUser((Long)session.getAttribute("loggedInUserID")));
+        model.addAttribute("books",bookService.allBooks());
+
+        return "bookmarket";
+    }
+
+    @PostMapping("/borrow")
+    public String borrow(@RequestParam("bookId") Long id, HttpSession session) {
+
+        Book book = bookService.findBook(id);
+        book.setLentUser((User)session.getAttribute("user"));
+        User loggedUser = userService.findUser((Long)session.getAttribute("loggedInUserID"));
+        loggedUser.getBorrowedBooks().add(book);
+
+        return "redirect:/bookmarket";
+    }
+
+    @PostMapping("/return")
+    public String returnBook(@RequestParam("bookId") Long bookId, HttpSession session){
+
+        Book returnBook = bookService.findBook(bookId);
+        User loggedUser = userService.findUser((Long)session.getAttribute("loggedInUserID"));
+        returnBook.setLentUser(null);
+        loggedUser.getBorrowedBooks().remove(returnBook);
+
+
+        return "redirect:/bookmarket";
+    }
+
+    @PutMapping("/books/{userID}/edit")
     public String editBook(@Valid @ModelAttribute("book") Book book,
-                           @RequestParam("id") Long userId,
+                           @PathVariable("userID") Long userId,
+                           @RequestParam("bookId") Long bookId,
                            BindingResult result,Model model){
         if(result.hasErrors()){
             model.addAttribute("book", book);
@@ -66,12 +107,18 @@ public class HomeController {
         }
 
         User user = userService.findUser(userId);
+        book.setId(bookId);
         book.setUser(user);
         bookService.updateBook(book);
 
         return "redirect:/books";
     }
 
+    @DeleteMapping("/books/delete/{bookId}")
+    public String delete(@PathVariable("bookId") Long id){
+        bookService.deleteBook(id);
+        return "redirect:/books";
+    }
 
     @PostMapping("/bookcreate")
     public String bookCreate(@Valid @ModelAttribute("book") Book book,
