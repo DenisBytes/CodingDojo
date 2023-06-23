@@ -12,6 +12,7 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.security.Principal;
 
@@ -30,8 +31,12 @@ public class MainController {
 
     @PostMapping("/register")
     public String register(@Valid @ModelAttribute("newUser")User user,
+                           @RequestParam(value = "error",required = false) String error,
                            BindingResult result, Model model, HttpSession session){
         userValidator.validate(user, result);
+        if(error != null){
+            model.addAttribute("errorMessage","Invalid credentials, Try again");
+        }
         if(result.hasErrors()){
             return "signup";
         }

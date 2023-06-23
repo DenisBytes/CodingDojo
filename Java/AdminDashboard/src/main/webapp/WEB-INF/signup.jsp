@@ -20,6 +20,7 @@
 <h1>Welcome!</h1>
 <h3>Join our growing Community</h3>
 <div class="container w-50">
+    <p><form:errors path="user.*"/></p>
     <form:form action="/register" method="post" modelAttribute="newUser">
 
         <div class="row d-flex justify-content-center">
@@ -78,6 +79,10 @@
         <div class="row d-flex justify-content-center">
             <h2>Login: </h2>
         </div>
+
+        <c:if test="${!errorMessage != null}">
+            ${errorMessage}
+        </c:if>
 
 
         <div class="row border border-info p-1">
