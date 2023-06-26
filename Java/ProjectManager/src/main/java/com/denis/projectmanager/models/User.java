@@ -10,6 +10,7 @@ import java.util.List;
 @Entity
 @Table(name = "users")
 public class User {
+
     @Id
     @GeneratedValue (strategy =  GenerationType.IDENTITY)
     private Long id;
@@ -65,6 +66,17 @@ public class User {
 
     public User(){
 
+    }
+
+    public User(Long id, String userName, String email, String password, String confirm, List<Project> projects, List<Project> particpatedProjects, List<Task> tasks) {
+        this.id = id;
+        this.userName = userName;
+        this.email = email;
+        this.password = password;
+        this.confirm = confirm;
+        this.projects = projects;
+        this.particpatedProjects = particpatedProjects;
+        this.tasks = tasks;
     }
 
     public Long getId() {

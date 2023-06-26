@@ -1,10 +1,7 @@
 package com.denis.projectmanager.models;
 
 import jakarta.persistence.*;
-import jakarta.validation.constraints.FutureOrPresent;
-import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.NotEmpty;
-import jakarta.validation.constraints.Size;
+import jakarta.validation.constraints.*;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import java.time.LocalDate;
@@ -28,6 +25,7 @@ public class Project {
     @Size(min = 3, message = "Description has to be at least 3 characters")
     private String description;
 
+    @NotNull(message = "Date is required!")
     @FutureOrPresent(message = "Due date must not be in the past")
     @DateTimeFormat(pattern = "MM-dd-yyyy")
     private LocalDate dueDate;
@@ -67,6 +65,16 @@ public class Project {
     public Project(){
         this.participatedUsers = new ArrayList<>();
         this.tasks = new ArrayList<>();
+    }
+
+    public Project(Long id, String title, String description, LocalDate dueDate, User teamLeader, List<User> participatedUsers, List<Task> tasks) {
+        this.id = id;
+        this.title = title;
+        this.description = description;
+        this.dueDate = dueDate;
+        this.teamLeader = teamLeader;
+        this.participatedUsers = participatedUsers;
+        this.tasks = tasks;
     }
 
     public Long getId() {

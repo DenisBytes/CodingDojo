@@ -36,7 +36,7 @@
 
 <div class="container">
   <c:forEach var="task" items="${tasks}">
-    <h2>Added by ${task.user.userName} at ${task.createOn()}</h2>
+    <h2>Added by ${task.user.userName} at ${task.createdAt}</h2>
     <p>${task.text}</p>
   </c:forEach>
 </div>

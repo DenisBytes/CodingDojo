@@ -48,6 +48,12 @@ public class Task {
 
     }
 
+    public Task(Long id, String text, User user, Project project) {
+        this.id = id;
+        this.text = text;
+        this.user = user;
+        this.project = project;
+    }
 
     public Long getId() {
         return id;
@@ -55,6 +61,10 @@ public class Task {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public Date getCreatedAt() {
+        return createdAt;
     }
 
     public String getText() {
