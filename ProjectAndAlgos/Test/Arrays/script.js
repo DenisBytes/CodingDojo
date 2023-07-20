@@ -78,19 +78,27 @@ console.log(arr);
 
 
 //not finished
-var arr1 = [1,2,2,2,2,2,2,2,4]
-function removeDoubles (array){
-    for (var i = 0; i< array.length; i++){
-        var temp = array[i];
-        for (var j = 1; j< array.length; j++){
-            if (temp == array[j]){
-                for (var k = 2; k < array.length+1; k++){
-                    array[k-1] = array[k];
+var arr1 = [-2,-2,3.14,5,5,10];
+var arr2 = [9,19,19,19,19,29];
+
+function removeDoubles(array){
+    for (var i = 0; i < array.length; i++){
+        for (var j = i+1; j < array.length; j++){
+            if (array[j-1] == array[j]){
+                for (var z = j; z <= array.length; z++){
+                    array[z-1] = array[z];
+                    if (z == array.length){
+                        array.pop();
+                    }
                 }
             }
         }
     }
 }
 
+
+console.log(arr1)
 removeDoubles(arr1);
+removeDoubles(arr2);
 console.log(arr1);
+console.log(arr2);
