@@ -102,3 +102,31 @@ removeDoubles(arr1);
 removeDoubles(arr2);
 console.log(arr1);
 console.log(arr2);
+
+
+
+var arr3 = [4,2,1,3,5];
+
+function minToFront(array){
+
+    var x = array[0];
+    var z;
+
+    for (var i = 0 ; i <array.length; i++){
+        if (x > array[i]){
+            x = array[i];
+            z = i;
+        }
+    }
+
+    for (var j = z; j >= 0; j--){
+        array[j] = array[j-1];
+        if (j == 0){
+            array[0] = x;
+        }
+    }
+}
+
+
+minToFront(arr3);
+console.log(arr3);
