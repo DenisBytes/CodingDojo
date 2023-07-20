@@ -105,6 +105,11 @@ console.log(arr2);
 
 
 
+
+
+
+
+
 var arr3 = [4,2,1,3,5];
 
 function minToFront(array){
@@ -130,3 +135,79 @@ function minToFront(array){
 
 minToFront(arr3);
 console.log(arr3);
+
+
+
+
+
+
+
+
+
+
+var arr4 = [1,2,3,4,5];
+
+function reverse(array){
+    var j = array.length-1;
+    for( var i = 0; i<array.length/2; i++){
+
+        var temp = array[i];
+        array[i] = array[j];
+        array[j] = temp;
+
+        j--;
+    }
+}
+
+reverse(arr4);
+console.log(arr4);
+
+
+function rotateArr(array, shiftBy){
+    for (var i = 0; i< array.length; i=i+shiftBy){
+        var temp = array[i+shiftBy];
+        array[i+shiftBy] = array[i];
+        array[i] = temp;
+    }
+}
+
+
+
+function filterRange (array, min, max){
+    
+    var arr = [];
+    var j = 0;
+        
+    
+    for (var i = min; i <= max; i++){
+        arr[j] = array[i];
+        j++;
+    }
+
+    return arr;
+}
+
+
+
+console.log(filterRange(arr4,1,3));
+
+
+var list = [1,2,3];
+var list1 = [4,5];
+
+
+
+
+function concatinate(array, array1){
+
+    var x = array.length;
+
+    for (var i = 0; i<array1.length; i++){
+        array[x] = array1[i];
+        x++;
+    }
+
+    return array;
+}
+
+console.log(concatinate(list,list1));
