@@ -77,7 +77,6 @@ swapPairs(arr);
 console.log(arr);
 
 
-//not finished
 var arr1 = [-2,-2,3.14,5,5,10];
 var arr2 = [9,19,19,19,19,29];
 
@@ -162,7 +161,7 @@ function reverse(array){
 reverse(arr4);
 console.log(arr4);
 
-
+//not done
 function rotateArr(array, shiftBy){
     for (var i = 0; i< array.length; i=i+shiftBy){
         var temp = array[i+shiftBy];
@@ -211,3 +210,110 @@ function concatinate(array, array1){
 }
 
 console.log(concatinate(list,list1));
+
+
+
+
+
+function removeNegatives(arr){
+    for (var i = 0; i < arr.length; i++){
+        if (arr[i] < 0){
+            for (var j = i+1; j <= arr.length; j++){
+                if (j == arr.length){
+                    arr.pop();
+                }
+                else{
+                    arr[j-1] = arr[j];
+                }
+            }
+        }
+    }
+    return arr;
+}
+
+console.log(removeNegatives([2,-1,3,-79,4,-57]));
+
+
+
+
+
+function secondToLast(arr){
+    if (arr.length <= 1){
+        return null;
+    }
+
+    //return arr[arr.length -2];
+
+    let x;
+
+    for (var i = 0; i < arr.length; i++){
+        if (i+2 == arr.length){
+            x = arr[i];
+        }
+    }
+
+    return x;
+}
+
+console.log(secondToLast([42,true,4,"Kate",7]));
+
+
+
+
+
+function secondLargest(arr){
+
+    let x;
+    let biggest;
+
+    for (var i = 0; i <arr.length; i++){
+        if (i == 0 && arr[i] > arr[i+1]){
+            x = arr[i+1];
+            biggest = arr[i];
+            continue;
+        }
+        else if(i == 0 && arr[i] < arr[i+1]){
+            x = arr[i];
+            biggest = arr[i+1];
+            continue;
+        }
+        else{
+            if (arr[i] > biggest){
+                x = biggest;
+                biggest = arr[i];
+            }
+            else if (arr[i] < biggest && arr[i]>x){
+                x = arr[i];
+            }
+        }
+        
+    }
+    return x;
+}
+
+console.log(secondLargest([42,1,4,Math.PI,7]));
+
+
+
+function nthToLast(arr,num){
+
+    if (arr.length < num){
+        return null;
+    }
+
+    return arr[arr.length - num];
+
+}
+
+
+console.log(nthToLast([5,2,3,6,4,9,7],3));
+
+
+
+
+//not done
+function nthLargest(arr, num){
+
+}
+
+
