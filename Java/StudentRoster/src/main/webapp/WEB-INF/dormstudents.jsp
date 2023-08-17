@@ -22,15 +22,17 @@
 <div class="container">
   <a href="/dorms">Dashboard</a>
   <table>
-    <form:form action="/dorms/${dormsId}" method="put" modelAttribute="dorm">
+    <form:form action="/dorms/${dorm.id}" method="post" modelAttribute="dorm">
+      <input type="hidden" name="_method" value="PUT">
 
+      <form:input type="hidden" path="name" value="${dorm.name}"></form:input>
       <tr>
         <td>
 
             <form:label path="students">Students</form:label>
             <form:select path="students" multiple="false">
               <c:forEach var="i" items="${students}">
-                <form:option value="${i.id}">${i.name} (${i.dorm.name})</form:option>
+                <form:option name="studentId" value="${i.id}">${i.name} (${i.dorm.name})</form:option>
               </c:forEach>
             </form:select>
 
@@ -51,15 +53,10 @@
     </tr>
     </thead>
     <tbody>
-    <c:forEach var="i" items="${dorm.students}">
+    <c:forEach var="student" items="${dorm.students}">
       <tr>
-        <c:if test="${i.dormChangeCount % 2 != 0}">
-          <td>${i.name} (${i.dorm.name})</td>
-        </c:if>
-        <c:if test="${i.dormChangeCount % 2 == 0}">
-          <td>${i.name}</td>
-        </c:if>
-        <td><a href="/dorms/remove/${i.id}">Remove</a></td>
+        <td>${student.name}</td>
+        <td><a href="/dorms/remove/${student.id}">Remove</a></td>
       </tr>
     </c:forEach>
     </tbody>

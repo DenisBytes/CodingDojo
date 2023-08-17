@@ -40,7 +40,7 @@ public class MainController {
         if(result.hasErrors()){
             return "signup";
         }
-        if(userService.allUsers().size()==0){
+        if(userService.allUsers().isEmpty()){
             userService.saveWithAdminRole(user);
             return "redirect:/admin";
         }else{
@@ -63,6 +63,4 @@ public class MainController {
         model.addAttribute("currentUser", userService.findByUsername(username));
         return "dashboardPage";
     }
-
-
 }

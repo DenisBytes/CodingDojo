@@ -1,3 +1,6 @@
+import com.caresoft.clinicapp.AdminUser;
+import com.caresoft.clinicapp.Physician;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -6,22 +9,22 @@ public class Main {
         AdminUser donnaNoble = new AdminUser(3, "Companion");
 
 
-        // Physician Implementation Tests
-        System.out.println("\n========== Physician Tests ==========\n");
+        // com.caresoft.clinicapp.Physician Implementation Tests
+        System.out.println("\n========== com.caresoft.clinicapp.Physician Tests ==========\n");
         String pinTest1 = doctor10.assignPin(42)? "FAIL" : "PASS";
-        System.out.printf("Physician pin assign test 1: %s\n", pinTest1);
+        System.out.printf("com.caresoft.clinicapp.Physician pin assign test 1: %s\n", pinTest1);
 
         String pinTest2 = doctor10.assignPin(4000)? "PASS" : "FAIL";
-        System.out.printf("Physician pin assign test 2: %s\n", pinTest2);
+        System.out.printf("com.caresoft.clinicapp.Physician pin assign test 2: %s\n", pinTest2);
 
         String authTest1 = doctor10.accessAuthorized(1234)? "FAIL" : "PASS";
-        System.out.printf("Physician auth test 1: %s\n", authTest1);
+        System.out.printf("com.caresoft.clinicapp.Physician auth test 1: %s\n", authTest1);
 
         String authTest2 = doctor10.accessAuthorized(1)? "PASS" : "FAIL";
-        System.out.printf("Physician auth test 2: %s\n", authTest2);
+        System.out.printf("com.caresoft.clinicapp.Physician auth test 2: %s\n", authTest2);
 
-        // AdminUser Implementation Tests
-        System.out.println("\n========== AdminUser Tests ==========\n");
+        // com.caresoft.clinicapp.AdminUser Implementation Tests
+        System.out.println("\n========== com.caresoft.clinicapp.AdminUser Tests ==========\n");
         String pinTest3 = roseTyler.assignPin(42)? "FAIL" : "PASS";
         System.out.printf("Admin pin assign test 1: %s\n", pinTest3);
 

@@ -38,24 +38,4 @@ public class DormService {
         }
     }
 
-    public void studentSelectDorm(Long studentId, Long dormId){
-        Student student = studentService.findStudent(studentId);
-        Dorm dorm = findDorm(dormId);
-
-        Integer i = student.getDormChangeCount();
-        i++;
-        student.setDormChangeCount(i);
-
-        student.setDorm(dorm);
-        dorm.getStudents().add(student);
-        updateDorm(dorm);
-    }
-
-    public void deleteStudent(Long studentId){
-        Student student = studentService.findStudent(studentId);
-        Dorm dorm = student.getDorm();
-
-        studentService.removeStudent(student);
-        updateDorm(dorm);
-    }
 }

@@ -46,11 +46,6 @@ public class MainController {
 
         return "dormstudents";
     }
-    @GetMapping("/dorms/remove/{studentId}")
-    public String remove(@PathVariable("studentId") Long studentId){
-        dormService.deleteStudent(studentId);
-        return "redirect:/dorms";
-    }
 
 
 
@@ -81,20 +76,6 @@ public class MainController {
         else{
             studentService.createStudent(student);
             return "redirect:/dorms";
-        }
-    }
-
-    @PutMapping("/dorms/{dormsId}")
-    public String dormUpdate(@Valid @ModelAttribute("dorm") Dorm dorm,
-                             @PathVariable("dormsId") Long id,
-                             @RequestParam("students") Student student,
-                             BindingResult result, Model model) {
-        if (result.hasErrors()) {
-            return "dormstudents";
-        } else {
-            dormService.studentSelectDorm(student.getId(), id);
-
-            return "redirect:/dorms/{id}";
         }
     }
 }

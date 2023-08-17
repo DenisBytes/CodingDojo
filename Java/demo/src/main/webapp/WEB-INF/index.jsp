@@ -5,10 +5,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <script type="text/javascript" src="/js/script.js"></script>
+    <!-- for Bootstrap CSS -->
+    <link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css" />
+    <!-- For any Bootstrap that uses JS -->
+    <script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
+    <title>Denis</title>
 </head>
 <body>
-    <h1>Here's the fruit of the day:</h1>
-    <h1><c:out value="${fruit}"></c:out></h1>
+    <h1>Hello Future with some style</h1>
 </body>
 </html>

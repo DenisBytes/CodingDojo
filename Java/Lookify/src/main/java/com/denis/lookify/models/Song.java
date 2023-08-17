@@ -1,10 +1,7 @@
 package com.denis.lookify.models;
 
 import jakarta.persistence.*;
-import jakarta.validation.constraints.Max;
-import jakarta.validation.constraints.Min;
-import jakarta.validation.constraints.NotNull;
-import jakarta.validation.constraints.Size;
+import jakarta.validation.constraints.*;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import java.util.Date;
@@ -25,10 +22,8 @@ public class Song {
     private String artist;
 
     @NotNull
-    @Min(1)
-    @Max(10)
-
-    private String rating;
+    @Size(min = 1, max = 10)
+    private Integer rating;
 
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     @Column(updatable = false)
@@ -40,7 +35,7 @@ public class Song {
 
     }
 
-    public Song(Long id, @NotNull String title, @NotNull String artist, @NotNull String rating) {
+    public Song(Long id, @NotNull String title, @NotNull String artist, @NotNull Integer rating) {
         this.id = id;
         this.title = title;
         this.artist = artist;
@@ -71,11 +66,11 @@ public class Song {
         this.artist = artist;
     }
 
-    public String getRating() {
+    public Integer getRating() {
         return rating;
     }
 
-    public void setRating(String rating) {
+    public void setRating(Integer rating) {
         this.rating = rating;
     }
 

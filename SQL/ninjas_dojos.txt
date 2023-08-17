@@ -1,0 +1,54 @@
+use exercise2;
+
+CREATE TABLE dojos (
+    id INT PRIMARY KEY,
+    name VARCHAR(45),
+    created_at DATETIME,
+    updated_at DATETIME
+);
+
+CREATE TABLE ninjas(
+id INT PRIMARY KEY,
+first_name VARCHAR (45),
+last_name VARCHAR (45),
+age INT,
+dojo_id INT,
+created_at DATETIME,
+updated_at DATETIME
+);
+
+INSERT INTO dojos (id, name, created_at, updated_at) VALUES (1,"codingdojo", NOW(),NOW());
+INSERT INTO dojos (id, name, created_at, updated_at) VALUES (2,"artdojo", NOW(),NOW());
+INSERT INTO dojos (id, name, created_at, updated_at) VALUES (3,"martialdojo", NOW(),NOW());
+
+SELECT * FROM dojos;
+
+SET SQL_SAFE_UPDATES = 0;
+
+DELETE FROM dojos;
+
+INSERT INTO dojos (id, name, created_at, updated_at) VALUES (1,"codingdojo", NOW(),NOW());
+INSERT INTO dojos (id, name, created_at, updated_at) VALUES (2,"artdojo", NOW(),NOW());
+INSERT INTO dojos (id, name, created_at, updated_at) VALUES (3,"martialdojo", NOW(),NOW());
+
+SELECT * FROM ninjas JOIN dojos ON dojos.id = ninjas.dojo_id;
+
+
+INSERT INTO ninjas (id, first_name, last_name, age, dojo_id, created_at, updated_at) VALUES (1,"mario", "cipolla", 18, 1, NOW(),NOW());
+INSERT INTO ninjas (id, first_name, last_name, age, dojo_id, created_at, updated_at) VALUES (2,"stefano", "aglio", 19, 1, NOW(),NOW());
+INSERT INTO ninjas (id, first_name, last_name, age, dojo_id, created_at, updated_at) VALUES (3,"luigi", "mortadella", 20, 1, NOW(),NOW());
+
+INSERT INTO ninjas (id, first_name, last_name, age, dojo_id, created_at, updated_at) VALUES (4,"luca", "prosciutto", 18, 2, NOW(),NOW());
+INSERT INTO ninjas (id, first_name, last_name, age, dojo_id, created_at, updated_at) VALUES (5,"lorenzo", "pasta", 19, 2, NOW(),NOW());
+INSERT INTO ninjas (id, first_name, last_name, age, dojo_id, created_at, updated_at) VALUES (6,"gianfranco", "pizza", 20, 2, NOW(),NOW());
+
+INSERT INTO ninjas (id, first_name, last_name, age, dojo_id, created_at, updated_at) VALUES (7,"massimo", "intonacco", 18, 3, NOW(),NOW());
+INSERT INTO ninjas (id, first_name, last_name, age, dojo_id, created_at, updated_at) VALUES (8,"edoardo", "vernice", 19, 3, NOW(),NOW());
+INSERT INTO ninjas (id, first_name, last_name, age, dojo_id, created_at, updated_at) VALUES (9,"riccardo", "mouse", 20, 3, NOW(),NOW());
+
+
+SELECT * FROM ninjas WHERE dojo_id = 1;
+SELECT * FROM ninjas WHERE dojo_id = 3;
+
+SELECT * FROM ninjas JOIN dojos ON dojos.id = ninjas.dojo_id WHERE ninjas.id = (SELECT MAX(id) FROM ninjas);
+

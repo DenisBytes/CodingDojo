@@ -1,3 +1,5 @@
+package com.caresoft.clinicapp;
+
 import com.caresoft.clinicapp.HIPAACompliantAdmin;
 import com.caresoft.clinicapp.HIPAACompliantUser;
 

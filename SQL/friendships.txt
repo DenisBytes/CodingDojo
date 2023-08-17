@@ -1,0 +1,46 @@
+use friendships;
+
+CREATE TABLE users(
+id INT AUTO_INCREMENT PRIMARY KEY,
+first_name VARCHAR(45),
+last_name VARCHAR(45),
+created_at DATETIME,
+updated_at DATETIME
+);
+
+CREATE TABLE friends(
+id INT AUTO_INCREMENT PRIMARY KEY,
+user_id INT,
+friend_id INT,
+created_at DATETIME,
+updated_at DATETIME
+);
+
+INSERT INTO users (first_name, last_name, created_at, updated_at) VALUES ("Amy", "Giver", NOW(), NOW());
+INSERT INTO users (first_name, last_name, created_at, updated_at) VALUES ("Eli", "Byers", NOW(), NOW());
+INSERT INTO users (first_name, last_name, created_at, updated_at) VALUES ("Marky", "Marks", NOW(), NOW());
+INSERT INTO users (first_name, last_name, created_at, updated_at) VALUES ("Kermit", "The Frog", NOW(), NOW());
+INSERT INTO users (first_name, last_name, created_at, updated_at) VALUES ("Big", "Bird", NOW(), NOW());
+INSERT INTO users (first_name, last_name, created_at, updated_at) VALUES ("Denis", "Skendaj", NOW(), NOW());
+
+SELECT * FROM users;
+
+INSERT INTO friends (user_id, friend_id) VALUES (1,2), (1,4), (1,6);
+INSERT INTO friends (user_id, friend_id) VALUES (2,1), (2,3), (2,5);
+INSERT INTO friends (user_id, friend_id) VALUES (3,2), (3,5);
+INSERT INTO friends (user_id, friend_id) VALUES (4,3);
+INSERT INTO friends (user_id, friend_id) VALUES (5,1), (5,6);
+INSERT INTO friends (user_id, friend_id) VALUES (6,2), (6,3);
+
+SELECT * FROM users JOIN friends ON users.id = friends.user_id JOIN users as user2 ON user2.id = friends.friend_id;
+SELECT * FROM users JOIN friends ON users.id = friends.user_id JOIN users as user2 ON user2.id = friends.friend_id WHERE friends.friend_id = 1;
+SELECT count(*) FROM users JOIN friends ON users.id = friends.user_id JOIN users as user2 ON user2.id = friends.friend_id ;
+
+SELECT users.first_name, users.last_name, COUNT(friends.id) AS friend_count
+FROM users
+LEFT JOIN friends ON users.id = friends.user_id
+GROUP BY users.id
+ORDER BY friend_count DESC
+LIMIT 1;
+
+SELECT users.first_name, users.last_name FROM users JOIN friends ON users.id = friends.friend_id WHERE friends.user_id = 3 ORDER BY users.first_name ;

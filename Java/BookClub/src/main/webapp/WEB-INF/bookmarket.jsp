@@ -56,10 +56,7 @@
       </c:if>
       <c:if test="${!user.id.equals(book.user.id)}">
         <td>
-          <form action="/borrow" method="post">
-            <input type="hidden" name="bookId" value="${book.id}">
-            <input type="submit" value="Borrow">
-          </form>
+          <a href="/borrow/${book.id}"><button>Borrow</button></a>
         </td>
       </c:if>
     </tr>
@@ -91,10 +88,7 @@
       <td><c:out value="${book.author}"></c:out></td>
       <td><c:out value="${book.user.userName}"></c:out></td>
       <td>
-        <form action="/return" method="post">
-          <input type="hidden" name="bookId" value="${book.id}">
-          <input type="submit" value="Return">
-        </form>
+        <a href="/return/${book.id}"><button>Return</button></a>
       </td>
     </tr>
 

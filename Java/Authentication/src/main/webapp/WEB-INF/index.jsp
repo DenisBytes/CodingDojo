@@ -16,95 +16,97 @@
     <link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css">
     <script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
 </head>
-<body>
+<body class="p-4 bg-light">
 <h1>Welcome!</h1>
 <h3>Join our growing Community</h3>
-<div class="container w-50">
-    <form:form action="/register" method="post" modelAttribute="newUser">
+<div class="d-flex justify-content-around w-100">
+    <div class="container rounded" style="margin-right: 5%">
+        <form:form action="/register" method="post" modelAttribute="newUser">
 
-        <div class="row d-flex justify-content-center">
-            <h2>Register: </h2>
-        </div>
-
-        <div class="row border border-info p-1">
-            <div class="col border-end border-info">
-                <form:label path="userName">Username: </form:label>
-                <form:errors path="userName"></form:errors>
+            <div class="row d-flex justify-content-center">
+                <h2>Register: </h2>
             </div>
-            <div class="col w-100">
-                <form:input path="userName"></form:input>
-            </div>
-        </div>
 
-        <div class="row border border-info p-1">
-            <div class="col border-end border-info">
-                <form:label path="email">Email: </form:label>
-                <form:errors path="email"></form:errors>
+            <div class="row border border-primary p-1">
+                <div class="col border-end border-primary">
+                    <form:label path="userName">Username: </form:label>
+                    <form:errors path="userName"></form:errors>
+                </div>
+                <div class="col">
+                    <form:input cssClass="w-100" path="userName"></form:input>
+                </div>
             </div>
-            <div class="col w-100">
-                <form:input path="email"></form:input>
+
+            <div class="row border border-primary p-1">
+                <div class="col border-end border-primary">
+                    <form:label path="email">Email: </form:label>
+                    <form:errors path="email"></form:errors>
+                </div>
+                <div class="col">
+                    <form:input cssClass="w-100" path="email"></form:input>
+                </div>
             </div>
-        </div>
 
-        <div class="row border border-info p-1">
-            <div class="col border-end border-info">
-                <form:label path="password">Password: </form:label>
-                <form:errors path="password"></form:errors>
+            <div class="row border border-primary p-1">
+                <div class="col border-end border-primary">
+                    <form:label path="password">Password: </form:label>
+                    <form:errors path="password"></form:errors>
+                </div>
+                <div class="col">
+                    <form:input cssClass="w-100" type="password" path="password"></form:input>
+                </div>
             </div>
-            <div class="col w-100">
-                <form:input type="password" path="password"></form:input>
+
+            <div class="row border border-primary p-1">
+                <div class="col border-end border-primary">
+                    <form:label path="confirm">Confirm Password: </form:label>
+                    <form:errors path="confirm"></form:errors>
+                </div>
+                <div class="col">
+                    <form:input cssClass="w-100" type="password" path="confirm"></form:input>
+                </div>
             </div>
-        </div>
 
-        <div class="row border border-info p-1">
-            <div class="col border-end border-info">
-                <form:label path="confirm">Confirm Password: </form:label>
-                <form:errors path="confirm"></form:errors>
+            <div class="d-flex justify-content-center row border border-primary p-1">
+                <input class="w-50 btn btn-primary" type="submit" value="Sumbit">
             </div>
-            <div class="col w-100">
-                <form:input type="password" path="confirm"></form:input>
+        </form:form>
+
+    </div>
+    <div class="container rounded" style="margin-left: 5%">
+        <form:form action="/login" method="post" modelAttribute="newLogin">
+
+            <div class="row d-flex justify-content-center">
+                <h2>Login: </h2>
             </div>
-        </div>
-
-        <div class="row border border-info p-1">
-            <input type="submit" value="Sumbit">
-        </div>
-    </form:form>
-
-</div>
-<div class="container w-50">
-    <form:form action="/login" method="post" modelAttribute="newLogin">
-
-        <div class="row d-flex justify-content-center">
-            <h2>Login: </h2>
-        </div>
 
 
-        <div class="row border border-info p-1">
-            <div class="col border-end border-info">
-                <form:label path="email">Email: </form:label>
-                <form:errors path="email"></form:errors>
+            <div class="row border border-primary p-1">
+                <div class="col border-end border-primary">
+                    <form:label path="email">Email: </form:label>
+                    <form:errors path="email"></form:errors>
+                </div>
+                <div class="col">
+                    <form:input cssClass="w-100" path="email"></form:input>
+                </div>
             </div>
-            <div class="col w-100">
-                <form:input path="email"></form:input>
-            </div>
-        </div>
 
-        <div class="row border border-info p-1">
-            <div class="col border-end border-info">
-                <form:label path="password">Password: </form:label>
-                <form:errors path="password"></form:errors>
+            <div class="row border border-primary p-1">
+                <div class="col border-end border-primary">
+                    <form:label path="password">Password: </form:label>
+                    <form:errors path="password"></form:errors>
+                </div>
+                <div class="col">
+                    <form:input cssClass="w-100" type="password" path="password"></form:input>
+                </div>
             </div>
-            <div class="col w-100">
-                <form:input type="password" path="password"></form:input>
+
+            <div class="d-flex justify-content-center row border border-primary p-1">
+                <input class="w-50 btn btn-primary" type="submit" value="Sumbit">
             </div>
-        </div>
 
-        <div class="row border border-info p-1">
-            <input type="submit" value="Sumbit">
-        </div>
-
-    </form:form>
+        </form:form>
+    </div>
 </div>
 </body>
 </html>

@@ -86,7 +86,7 @@
     </div>
 
     <h1>Activities: </h1>
-    <div class="container w-100 h-100 border-2 cursor-pointer">
+    <div class="container w-75 h-auto border-2">
         <c:forEach var="activity" items="${activities}">
             <c:if test="${activity.contains('earned')}">
                 <p class="green"><c:out value="${activity}" /></p>

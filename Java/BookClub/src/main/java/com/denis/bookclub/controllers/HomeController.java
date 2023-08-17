@@ -73,25 +73,23 @@ public class HomeController {
         return "bookmarket";
     }
 
-    @PostMapping("/borrow")
-    public String borrow(@RequestParam("bookId") Long id, HttpSession session) {
+    @GetMapping("/borrow/{bookId}")
+    public String borrow(@PathVariable("bookId") Long id, HttpSession session) {
 
         Book book = bookService.findBook(id);
         book.setLentUser((User)session.getAttribute("user"));
-        User loggedUser = userService.findUser((Long)session.getAttribute("loggedInUserID"));
-        loggedUser.getBorrowedBooks().add(book);
+        bookService.updateBook(book);
 
         return "redirect:/bookmarket";
     }
 
-    @PostMapping("/return")
-    public String returnBook(@RequestParam("bookId") Long bookId, HttpSession session){
+    @GetMapping("/return/{bookId}")
+    public String returnBook(@PathVariable("bookId") Long bookId, HttpSession session){
 
         Book returnBook = bookService.findBook(bookId);
         User loggedUser = userService.findUser((Long)session.getAttribute("loggedInUserID"));
         returnBook.setLentUser(null);
         loggedUser.getBorrowedBooks().remove(returnBook);
-
 
         return "redirect:/bookmarket";
     }

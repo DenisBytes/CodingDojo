@@ -16,8 +16,6 @@ public class Student {
     @NotBlank
     private String name;
 
-    private Integer dormChangeCount = 0;
-
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "dorm_id")
     private Dorm dorm;
@@ -71,13 +69,5 @@ public class Student {
 
     public void setDorm(Dorm dorm) {
         this.dorm = dorm;
-    }
-
-    public Integer getDormChangeCount() {
-        return dormChangeCount;
-    }
-
-    public void setDormChangeCount(Integer dormChangeCount) {
-        this.dormChangeCount = dormChangeCount;
     }
 }

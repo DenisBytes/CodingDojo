@@ -2,11 +2,12 @@ package com.denis.jpademo.controllers;
 
 import com.denis.jpademo.models.Book;
 import com.denis.jpademo.services.BookService;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -19,11 +20,25 @@ public class BookController {
         this.bookService = bookService;
     }
 
-    @RequestMapping("")
+    @GetMapping("")
     public String index(Model model){
         List<Book> books = bookService.allBooks();
         model.addAttribute("books", books);
         return "index";
+    }
+    @GetMapping("/new")
+    public String newBook(@ModelAttribute("book") Book book){
+        return "new";
+    }
+
+    @PostMapping("")
+    public String elaborate(@Valid @ModelAttribute("book") Book book,
+                            BindingResult result){
+        if (result.hasErrors()){
+            return "/new";
+        }
+        bookService.createBook(book);
+        return "redirect:/books";
     }
 
     @RequestMapping("/{bookId}")

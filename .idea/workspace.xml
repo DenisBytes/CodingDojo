@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="a1b5ef8c-390b-42f6-a869-58011c3113dc" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/Java/AdminDashboard/src/main/java/com/denis/admindashboard/controllers/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/AdminDashboard/src/main/java/com/denis/admindashboard/controllers/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/AdminDashboard/src/main/webapp/WEB-INF/signup.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/Java/AdminDashboard/src/main/webapp/WEB-INF/signup.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/Auth/src/main/java/com/denis/auth/config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/Auth/src/main/java/com/denis/auth/config/WebSecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/Auth/src/main/java/com/denis/auth/controllers/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/Auth/src/main/java/com/denis/auth/controllers/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/Auth/src/main/java/com/denis/auth/models/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/Auth/src/main/java/com/denis/auth/models/Role.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/Auth/src/main/java/com/denis/auth/models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/Auth/src/main/java/com/denis/auth/models/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/Auth/src/main/java/com/denis/auth/repositories/RoleRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/Auth/src/main/java/com/denis/auth/repositories/RoleRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/Auth/src/main/java/com/denis/auth/repositories/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/Auth/src/main/java/com/denis/auth/repositories/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/Auth/src/main/java/com/denis/auth/services/UserDetailsServiceImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/Auth/src/main/java/com/denis/auth/services/UserDetailsServiceImplementation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/Auth/src/main/java/com/denis/auth/services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/Auth/src/main/java/com/denis/auth/services/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/Auth/src/main/java/com/denis/auth/validator/UserValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/Auth/src/main/java/com/denis/auth/validator/UserValidator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/Auth/src/main/resources/messages.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Java/Auth/src/main/resources/messages.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/Auth/src/main/webapp/WEB-INF/adminPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/Java/Auth/src/main/webapp/WEB-INF/adminPage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/Auth/src/main/webapp/WEB-INF/homePage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/Java/Auth/src/main/webapp/WEB-INF/homePage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/Auth/src/main/webapp/WEB-INF/loginPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/Java/Auth/src/main/webapp/WEB-INF/loginPage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/Auth/src/main/webapp/WEB-INF/registrationPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/Java/Auth/src/main/webapp/WEB-INF/registrationPage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/Authentication/src/main/java/com/denis/authentication/repositories/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/Authentication/src/main/java/com/denis/authentication/repositories/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/Authentication/src/main/webapp/WEB-INF/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/Java/Authentication/src/main/webapp/WEB-INF/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/BookClub/src/main/java/com/denis/bookclub/controllers/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/BookClub/src/main/java/com/denis/bookclub/controllers/HomeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/BookClub/src/main/java/com/denis/bookclub/services/BookService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/BookClub/src/main/java/com/denis/bookclub/services/BookService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/BookClub/src/main/webapp/WEB-INF/bookmarket.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/Java/BookClub/src/main/webapp/WEB-INF/bookmarket.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/CareSoft/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/CareSoft/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/CareSoft/src/com/caresoft/clinicapp/AdminUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/CareSoft/src/com/caresoft/clinicapp/AdminUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/CareSoft/src/com/caresoft/clinicapp/Physician.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/CareSoft/src/com/caresoft/clinicapp/Physician.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/CareSoft/src/com/caresoft/clinicapp/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/CareSoft/src/com/caresoft/clinicapp/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/JPAdemo/src/main/java/com/denis/jpademo/controllers/BookController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/JPAdemo/src/main/java/com/denis/jpademo/controllers/BookController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/JPAdemo/src/main/java/com/denis/jpademo/models/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/JPAdemo/src/main/java/com/denis/jpademo/models/Book.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/JPAdemo/src/main/webapp/WEB-INF/new.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/Java/JPAdemo/src/main/webapp/WEB-INF/new.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/Lookify/src/main/java/com/denis/lookify/models/Song.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/Lookify/src/main/java/com/denis/lookify/models/Song.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/NinjaGoldGame/src/main/java/com/denis/ninjagoldgame/controllers/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/NinjaGoldGame/src/main/java/com/denis/ninjagoldgame/controllers/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/NinjaGoldGame/src/main/resources/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/Java/NinjaGoldGame/src/main/resources/static/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/NinjaGoldGame/src/main/webapp/WEB-INF/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/Java/NinjaGoldGame/src/main/webapp/WEB-INF/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/Omikuji/src/main/java/com/denis/omikuji/controllers/OmikujiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/Omikuji/src/main/java/com/denis/omikuji/controllers/OmikujiController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/StudentRoster/src/main/java/com/denis/studentroster/controllers/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/StudentRoster/src/main/java/com/denis/studentroster/controllers/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/StudentRoster/src/main/java/com/denis/studentroster/models/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/StudentRoster/src/main/java/com/denis/studentroster/models/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/StudentRoster/src/main/java/com/denis/studentroster/services/DormService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/StudentRoster/src/main/java/com/denis/studentroster/services/DormService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/StudentRoster/src/main/webapp/WEB-INF/dormstudents.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/Java/StudentRoster/src/main/webapp/WEB-INF/dormstudents.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/Zookeeper/src/Bat.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/Zookeeper/src/Bat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/codingdojodemo/src/main/java/com/example/codingdojodemo/HomeController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/demo/src/main/java/com/example/demo/controllers/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/demo/src/main/java/com/example/demo/controllers/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/demo/src/main/resources/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/Java/demo/src/main/resources/static/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/demo/src/main/resources/static/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/Java/demo/src/main/resources/static/js/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/demo/src/main/webapp/WEB-INF/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/Java/demo/src/main/webapp/WEB-INF/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/relationships/src/main/java/modelspart2/License.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/relationships/src/main/java/modelspart2/License.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/relationships/src/main/java/modelspart2/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/relationships/src/main/java/modelspart2/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/relationships/src/main/webapp/WEB-INF/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/Java/relationships/src/main/webapp/WEB-INF/index.jsp" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="2TTUQjhE2ZxzEx0vUmK0N83ry5W" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/Denis/Desktop/PortfolioSpringPorject",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a1b5ef8c-390b-42f6-a869-58011c3113dc" name="Changes" comment="" />
+      <created>1691066550217</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1691066550217</updated>
+      <workItem from="1691066551227" duration="12000" />
+    </task>
+    <servers />
+  </component>
+</project>

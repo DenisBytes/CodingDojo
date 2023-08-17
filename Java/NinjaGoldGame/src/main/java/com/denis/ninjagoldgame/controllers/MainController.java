@@ -30,7 +30,7 @@ public class MainController {
         Random random = new Random();
         SimpleDateFormat date = new SimpleDateFormat("MMMM d yyyy h:mm a");
         int i = (int) session.getAttribute("gold");
-        ArrayList<String> activities = new ArrayList<>();
+        ArrayList<String> activities = (ArrayList<String>) session.getAttribute("activities");
 
         if (place.equals("farm")){
             int farm = random.nextInt(11)+10;
