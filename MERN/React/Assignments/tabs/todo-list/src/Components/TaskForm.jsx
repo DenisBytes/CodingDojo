@@ -20,6 +20,16 @@ export const TaskForm = (props) =>{
         backgroundColor: "blue",
     }
     
+    /*
+
+    Not Working For Some Reason
+
+    useEffect(()=>{
+        localStorage.setItem("tasks", JSON.stringify(TaskArray));
+        console.log("Done");
+    },[TaskArray]);
+    */
+
     useEffect(() => {
         const tasks = JSON.parse(localStorage.getItem("tasks"));
         if (tasks) {

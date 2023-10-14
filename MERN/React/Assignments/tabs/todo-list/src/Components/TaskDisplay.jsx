@@ -23,6 +23,15 @@ export const TaskDisplay = (props) =>{
         localStorage.setItem("tasks", JSON.stringify(showTask));
         console.log(showTask)
     }
+    /*
+
+    Not Working For Some Reason
+
+    useEffect(()=>{
+        localStorage.setItem("tasks", JSON.stringify(showTask));
+        console.log("Done");
+    },[showTask]);
+    */
 
     useEffect(() => {
         const tasks = JSON.parse(localStorage.getItem("tasks"));
