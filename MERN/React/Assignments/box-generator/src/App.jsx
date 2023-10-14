@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import './App.css'
-import { BoxContainerForm } from './components/box';
-import { BoxDisplay } from './components/BoxDisplay';
+import { BoxContainerForm } from './Components/Box';
+import { BoxDisplay } from './Components/BoxDisplay';
 
 
 function App() {
