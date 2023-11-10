@@ -1,19 +1,27 @@
-import React, { useState } from "react";
+import React, { Component } from "react";
 
-export const PersonCard = (props) =>{
+export class PersonCard extends Component{
 
-    const {firstName, lastName, age, hairColor} = props;
+    constructor(props){
+        super(props);  
+        this.state = {
+            age: 0
+        };
+    }
 
-    const [getState, setState] = useState(age);
+    flipSwitch = ()=>this.setState({age: this.state.age+1});    
+    render (){
+        const {firstName, lastName, hairColor} = this.props;
 
-    const increaseAge = () => setState(getState + 1);
+        return (
+            <div>
+                <h1>{lastName}, {firstName}</h1>
+                <p>Age: {this.state.age}</p>
+                <p>Hair Color: {hairColor}</p>
+                <button onClick={this.flipSwitch}>Increment Age</button>
+            </div>
+        );
+    }
 
-    return (
-        <div>
-            <h1>{lastName}, {firstName}</h1>
-            <p>Age: {getState}</p>
-            <p>Hair Color: {hairColor}</p>
-            <button onClick={increaseAge}>Increase Age</button>
-        </div>
-    );
 }
+
