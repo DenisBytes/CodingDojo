@@ -1,4 +1,4 @@
-# CodingDojo Bootcamp Project
+# CodingDojo Bootcamp
 
 ## Overview
 
