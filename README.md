@@ -2,7 +2,7 @@
 
 ## Overview
 
-CodingDojo bootcamp, which consisted Java Spring and MERN stack. All the exercizes and assignments covered.
+CodingDojo bootcamp, which consisted Java Spring and MERN stack. All the exercizes and assignments are covered.
 
 ## Acknowledgments
 
